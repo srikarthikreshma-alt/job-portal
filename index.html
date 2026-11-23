@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find your next opportunity with CareerNest." />
+  <title>CareerNest — Find your next opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#"><span class="brand-mark">C</span> career<span>nest</span></a>
+      <div class="nav-links">
+        <a class="active" href="#jobs">Find jobs</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#career-tips">Career tips</a>
+      </div>
+      <a class="nav-cta" href="#jobs">Explore jobs <span>↗</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
+      <div class="container hero-content">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <h1>Find work that<br><span>moves you forward.</span></h1>
+        <p class="hero-copy">Discover meaningful opportunities at companies where your skills can make a difference.</p>
+        <form class="search-panel" id="searchForm">
+          <label class="search-field">
+            <span class="field-icon">⌕</span>
+            <span class="field-content"><small>What are you looking for?</small><input id="keywordInput" type="search" placeholder="Job title, skill or company" /></span>
+          </label>
+          <span class="search-divider"></span>
+          <label class="search-field location-field">
+            <span class="field-icon">⌖</span>
+            <span class="field-content"><small>Where?</small><input id="locationInput" type="search" placeholder="City or remote" /></span>
+          </label>
+          <button class="search-button" type="submit">Search jobs <span>→</span></button>
+        </form>
+        <div class="popular-searches"><span>Popular:</span> <button data-search="Frontend">Frontend</button><button data-search="UI Designer">UI Designer</button><button data-search="Data Analyst">Data Analyst</button><button data-search="Remote">Remote</button></div>
+        <div class="hero-stats">
+          <div><strong>2,400<span>+</span></strong><small>Open positions</small></div>
+          <div><strong>850<span>+</span></strong><small>Hiring companies</small></div>
+          <div><strong>12k<span>+</span></strong><small>Careers started</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="jobs-section container" id="jobs">
+      <div class="section-heading">
+        <div><div class="section-kicker">OPPORTUNITIES FOR YOU</div><h2>Explore open roles<span>.</span></h2><p>Find a role that fits your ambition and your next big idea.</p></div>
+        <div class="result-count" id="resultCount">Showing 6 jobs</div>
+      </div>
+      <div class="jobs-layout">
+        <aside class="filters">
+          <div class="filter-top"><h3>Filters</h3><button id="clearFilters">Clear all</button></div>
+          <div class="filter-group"><h4>Work type</h4>
+            <label><input type="checkbox" name="type" value="Full-time"> Full-time <span>4</span></label>
+            <label><input type="checkbox" name="type" value="Internship"> Internship <span>1</span></label>
+            <label><input type="checkbox" name="type" value="Contract"> Contract <span>1</span></label>
+          </div>
+          <div class="filter-group"><h4>Workplace</h4>
+            <label><input type="checkbox" name="workplace" value="Remote"> Remote</label>
+            <label><input type="checkbox" name="workplace" value="Hybrid"> Hybrid</label>
+            <label><input type="checkbox" name="workplace" value="On-site"> On-site</label>
+          </div>
+          <div class="filter-group"><h4>Experience</h4>
+            <label><input type="checkbox" name="experience" value="Entry level"> Entry level</label>
+            <label><input type="checkbox" name="experience" value="Mid level"> Mid level</label>
+            <label><input type="checkbox" name="experience" value="Senior level"> Senior level</label>
+          </div>
+          <div class="filter-note"><span>✦</span><strong>Your next opportunity is out there.</strong><p>Keep your profile updated and let great companies find you.</p></div>
+        </aside>
+
+        <div class="job-results">
+          <div class="jobs-toolbar"><span>Recommended for you</span><label>Sort by <select id="sortSelect"><option value="recent">Most recent</option><option value="salary">Highest salary</option></select></label></div>
+          <div id="jobList" class="job-list"></div>
+          <div id="emptyState" class="empty-state" hidden><div>⌕</div><h3>No jobs found</h3><p>Try changing your search or clearing some filters.</p><button id="resetSearch">Reset search</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="container how-inner">
+        <div><div class="section-kicker">SIMPLE BY DESIGN</div><h2>Your next role,<br><span>in three steps.</span></h2><p>Job searching shouldn't feel like a full-time job. We've made it simpler.</p></div>
+        <div class="steps">
+          <article><div class="step-number">01</div><div><h3>Discover</h3><p>Explore curated openings that match your skills and interests.</p></div></article>
+          <article><div class="step-number">02</div><div><h3>Find your fit</h3><p>Compare roles, workplace options, and salary ranges with confidence.</p></div></article>
+          <article><div class="step-number">03</div><div><h3>Apply & grow</h3><p>Take the next step and start a conversation with your future team.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tips-section container" id="career-tips">
+      <div><div class="section-kicker">A LITTLE CAREER INSPIRATION</div><h2>Make your next move<br>your best one.</h2></div>
+      <div class="tip-card"><span>✦ CAREER NOTE</span><p>“Your skills open the door. Your curiosity helps you grow once you're in.”</p><small>Keep learning. Keep moving.</small></div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><a class="brand" href="#"><span class="brand-mark">C</span> career<span>nest</span></a><p>Good work. Good people. Better possibilities.</p><small>© 2026 CareerNest. Demo website.</small></div></footer>
+
+  <dialog id="applyDialog" class="apply-dialog">
+    <form id="applicationForm" method="dialog">
+      <button class="dialog-close" type="button" aria-label="Close">×</button>
+      <div class="section-kicker">TAKE THE NEXT STEP</div>
+      <h2>Apply for this role</h2>
+      <p class="dialog-job" id="dialogJobTitle"></p>
+      <label>Your full name<input name="name" required placeholder="e.g. Alex Morgan"></label>
+      <label>Email address<input name="email" type="email" required placeholder="you@example.com"></label>
+      <label>LinkedIn or portfolio URL <input name="portfolio" type="url" placeholder="https://"></label>
+      <label>Short introduction<textarea name="message" rows="3" placeholder="Tell the company a little about yourself..."></textarea></label>
+      <button class="search-button submit-application" type="submit">Submit application <span>→</span></button>
+      <p class="demo-note">Demo only: your details are not sent to a company or stored.</p>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
